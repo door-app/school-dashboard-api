@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  school_dashboard_api:
+    build: .
+    image: school-dashboard-api:1.0.0
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    tty: true
+    command:
+      - nodemon
+      - bin/www
