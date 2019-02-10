@@ -1,6 +1,6 @@
 FROM node:8.11-alpine
 WORKDIR /app
 COPY . /app
-RUN npm install -g nodemon && npm install -g forever && npm install
+RUN npm install -g nodemon && npm install
 EXPOSE 3000
-CMD ["forever", "bin/www"]
+CMD ["npm", "start"]
